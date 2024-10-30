@@ -6,7 +6,7 @@ import (
 	"github.com/cisco-flash/user-management-system/database"
 	"github.com/cisco-flash/user-management-system/router"
 	"github.com/gofiber/fiber/v2"
-	"github.com/joho/godotenv"
+	// "github.com/joho/godotenv"
 	"gorm.io/gorm"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 
@@ -22,11 +22,11 @@ type User struct {
 }
 
 func main() {
-	err := godotenv.Load(".env")
+	// err := godotenv.Load(".env")
 
-	if err != nil {
-		log.Fatal("error loading env File", err)
-	}
+	// if err != nil {
+	// 	log.Fatal("error loading env File", err)
+	// }
 	database.Connect()
 
 	app := fiber.New()
